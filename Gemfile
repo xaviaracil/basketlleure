@@ -15,7 +15,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platform => :ruby
+  gem 'therubyracer', :platform => :ruby
 
   gem 'uglifier', '>= 1.0.3'
 end
@@ -33,6 +33,16 @@ gem 'jquery-rails'
 
 # Deploy with Capistrano
 # gem 'capistrano'
+group :development, :test do
+	gem 'ruby-debug19', :require => 'ruby-debug'
+	gem 'rspec-rails'
+	gem 'ZenTest' # automatic rerun of the test
+	gem 'simplecov', :require => false # code coverage
+	gem 'cucumber-rails'
+	gem 'cucumber-rails-training-wheels' # some pre-fabbed step definitions
+	gem 'database_cleaner'               # to clean out Cucumber's test database between runs
+	gem 'capybara'                       # lets Cucumber pretend to be a web browser
+	gem 'launchy'                        # a useful debugging aid for user stories
+end
 
-# To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
+gem 'haml'
