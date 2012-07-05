@@ -1,0 +1,5 @@
+%h1 Basket Lleure
+%h2 Teams
+%ul
+  - @teams.each do |team|
+    %li= link_to team.name, team
