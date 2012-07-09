@@ -12,5 +12,7 @@ Scenario: see team's data
 
   When I am on the Basket Lleure home page  
   And I follow "Comodines"
-  Then I should be on the team details page 
+  Then I should be on the team details page for "Comodines"
   And I should see "Comodines"
+  And I should see "Standing"
+  And I should see "Next Game"

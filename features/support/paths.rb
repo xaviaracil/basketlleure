@@ -16,6 +16,9 @@ module NavigationHelpers
     when /^the Basket Lleure home\s?page$/
       '/'
 
+    when /^the team details page for "(.*)"$/
+      team_path Team.find_by_name($1)
+      
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
