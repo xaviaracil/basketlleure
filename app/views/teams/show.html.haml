@@ -1,4 +1,16 @@
-%h2= @team.name
+.header
+  %h2= @team.name
+  %p Logo TODO
+  %p Location TODO
+  
+.box
+  %h3 Roster
+  %ul= render :partial => 'player', :collection => @team.players
+  
+.box
+  %h3 Scores
+  %p TODO
+  
 .panel 
   %h3 Next Game
   %p TODO

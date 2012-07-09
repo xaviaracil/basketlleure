@@ -21,7 +21,6 @@ describe TeamsController do
     it 'should make the team available to that template' do
       assigns(:team).should == @fake_team
     end
-    
   end
   
 end
