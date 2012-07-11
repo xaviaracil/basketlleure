@@ -1,4 +1,4 @@
 .player
   %li
-    = image_tag player.photo
+    = image_tag photo_path(player), :alt => player.name, :id => "photo_#{player.id}"
     = player.name

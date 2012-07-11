@@ -20,3 +20,12 @@ Then /^I should see "(.*)" before "(.*)"$/ do |e1, e2|
   regexp = /#{e1}.*#{e2}/m
   assert page.body =~ regexp, "#{e1} should be before #{e2}"
 end
+
+
+Then /^the photo of "(.*?)" should be empty$/ do |player_name|
+  player = Player.find_by_name player_name
+  
+  page.should have_content player_name
+  page.should have_css "#photo_#{player.id}"
+  page.find_by_id("photo_#{player.id}")[:src].should == "/assets/player.png"
+end
