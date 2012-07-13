@@ -3,3 +3,14 @@
 %ul
   - @teams.each do |team|
     %li= link_to team.name, team
+    
+%h2 Next Games
+%ul
+  - @games.each do |game|
+    %li
+      = link_to game.local.name, game.local
+      VS
+      = link_to game.visitor.name, game.visitor
+      (
+      = game.date
+      )
