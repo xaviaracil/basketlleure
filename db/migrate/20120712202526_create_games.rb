@@ -7,6 +7,7 @@ class CreateGames < ActiveRecord::Migration
       t.integer :local_score
       t.integer :visitor_score
       t.integer :division_id
+      t.integer :day
 
       t.timestamps
     end

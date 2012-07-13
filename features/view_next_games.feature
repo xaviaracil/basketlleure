@@ -10,17 +10,23 @@ Background: Teams and Games added to database
   | Comodines | logo |
   | Teresina  | logo |
   
+  And the following division exist:
+  | name    | current_day |
+  | Primera | 1           |
+  | Segunda | 2           |
+  
   And the following games exist:
-  | local     | visitor   | division | days_from_now |   
-  | Comodines | Teresina  |  Primera |  10           |
-  | Teresina  | Comodines |  Primera |  20           |
+  | local         | visitor   | division | day | days_from_now |   
+  | Comodines     | Teresina  |  Primera |  1  |  10           |
+  | Teresina      | Comodines |  Primera |  2  |  20           |
+  | Sun Chemical  | Lloreda   |  Segunda |  2  |  1            |
 
 Scenario: View next games (Main Page)
 
   When I am on the Basket Lleure home page  
   Then I should see "Next Games"
   And I should see "Comodines VS Teresina"
-  And I should see "Teresina VS Comodines"
+  And I should see "Sun Chemical VS Lloreda"
   
 Scenario: View next games (Team's Page)
 

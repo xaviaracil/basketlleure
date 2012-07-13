@@ -13,7 +13,11 @@
   
 .panel 
   %h3 Next Game
-  %p TODO
+  %ul
+    - if @game
+      = render :partial => 'games/game', :object => @game
+    - else
+      No upcoming games
   
 .panel
   %h3 Standing
